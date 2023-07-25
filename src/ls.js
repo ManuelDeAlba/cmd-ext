@@ -50,7 +50,7 @@ async function ls(ruta){
     
     // Se muestran los datos del "ls"
     stats.forEach(({tipo, nombre, tam}) => {
-        let cTipo = pc.bgWhite(" " + pc.green(tipo) + " ");
+        let cTipo = pc.bgWhite(" " + pc.black(tipo) + " ");
         let cNombre = tipo == "d" ? pc.bgBlue(nombre) : pc.blue(nombre.padEnd(maxLength + 1));
 
         console.log(`${cTipo} ${cNombre} ${tam}`);

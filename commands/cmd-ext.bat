@@ -18,6 +18,7 @@ echo - ls [dir] - List the information about the files in the selected directory
 echo - cat [file] - Display the file content
 echo - fetch [url] ... [url] - Fetch info from urls
 echo - touch [name] ... [name] - Create files
+echo - find [name] [root] - Recursively search for the file or directory from the root
 goto end
 
 @REM Obtiene los cambios del repositorio remoto
