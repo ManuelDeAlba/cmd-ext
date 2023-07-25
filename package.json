@@ -1,0 +1,11 @@
+{
+  "name": "cmd-ext",
+  "version": "1.0.0",
+  "description": "Custom cmd commands",
+  "main": "index.js",
+  "author": "Manuel De Alba",
+  "license": "ISC",
+  "dependencies": {
+    "picocolors": "^1.0.0"
+  }
+}
