@@ -29,7 +29,7 @@ cd %~dp0
 @REM Actualizamos el código
 git pull origin main
 @REM Se actualizan las dependencias
-npm i
+call npm i
 @REM Regresamos a la ruta
 cd %ruta_actual%
 goto end
