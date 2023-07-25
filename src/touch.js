@@ -4,6 +4,11 @@ const pc = require("picocolors");
 
 const [ , , ...nombres] = process.argv;
 
+if(nombres.length == 0){
+    console.log(pc.red("Introduce un nombre para el archivo\ntouch [nombre] ... [nombres]"));
+    process.exit(1);
+}
+
 nombres.forEach(async nombre => {
     // Revisa si ya existe el archivo
     let existe = false;
@@ -28,5 +33,6 @@ nombres.forEach(async nombre => {
         } else {
             console.log(pc.red("Error al crear el archivo: " + err.message));
         }
+        process.exit(1);
     }
 })
