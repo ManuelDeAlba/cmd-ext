@@ -9,7 +9,14 @@ async function cat(ruta){
     try{
         let contenido = await fs.readFile(ruta, "utf-8");
 
-        console.log(pc.bgWhite(pc.black("Archivo: " + path.join(process.cwd(), ruta))));
+        // Se muestran la ruta del archivo
+        if(path.isAbsolute(ruta)){
+            console.log(pc.bgWhite(pc.black("Archivo: " + path.resolve(ruta))));
+        } else {
+            console.log(pc.bgWhite(pc.black("Archivo: " + path.join(process.cwd(), ruta))));
+        }
+
+        // Se muestra el contenido del archivo
         console.log(pc.bgBlack(pc.white(contenido)));
     } catch(err){
         console.error(pc.red(`No se pudo leer el archivo ${ruta}`));
