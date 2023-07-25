@@ -5,7 +5,7 @@ const pc = require("picocolors");
 const [ , , ...nombres] = process.argv;
 
 if(nombres.length == 0){
-    console.log(pc.red("Introduce un nombre para el archivo\ntouch [nombre] ... [nombres]"));
+    console.log(pc.red("Introduce un nombre para el archivo\ntouch [nombre] ... [nombre]"));
     process.exit(1);
 }
 
