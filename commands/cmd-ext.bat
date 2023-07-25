@@ -1,7 +1,11 @@
 @echo off
 
-@REM Se obtiene el primer argumento
-goto %1
+@REM Si no se especificó ningún comando en el primer argumento, muestra la ayuda
+if "%1" == "" (
+    goto help
+) else (
+    goto %1
+)
 
 @REM Muestra los comandos disponibles
 :help
@@ -24,6 +28,8 @@ set "ruta_actual=%cd%"
 cd %~dp0
 @REM Actualizamos el código
 git pull origin main
+@REM Se actualizan las dependencias
+npm i
 @REM Regresamos a la ruta
 cd %ruta_actual%
 goto end
