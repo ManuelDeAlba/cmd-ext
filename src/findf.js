@@ -4,7 +4,7 @@ const fs = require("node:fs/promises");
 const path = require("node:path");
 const pc = require("picocolors");
 
-const nombre = process.argv[2];
+const nombre = process.argv[2].toLowerCase();
 const raiz = process.argv[3] || ".";
 const raizAbs = path.resolve(process.cwd(), raiz);
 
@@ -34,7 +34,7 @@ async function buscarArchivo(carpetaAbs, nombre){
         if(isDirectory) buscarArchivo(rutaAbs, nombre);
 
         // Si el nombre coincide con el directorio o archivo, lo muestra
-        if(archivo.includes(nombre)){
+        if(archivo.toLowerCase().includes(nombre)){
             if(isDirectory) console.log(`${pc.bgWhite(pc.black(" d "))} ${pc.bgBlue(pc.white(rutaAbs))}`);
             else console.log(`${pc.bgWhite(pc.black(" f "))} ${pc.blue(rutaAbs)}`);
         }
