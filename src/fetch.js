@@ -1,3 +1,5 @@
+// - fetch [url] ... [url] - Fetch info from urls
+
 const pc = require("picocolors");
 
 const [, , ...urls] = process.argv;

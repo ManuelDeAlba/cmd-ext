@@ -1,3 +1,5 @@
+// - ls [dir] - List the information about the files in the selected directory (current by default)
+
 const fs = require("node:fs/promises");
 const path = require("node:path");
 const pc = require("picocolors");

@@ -1,3 +1,5 @@
+// - find [name] [root] - Recursively search for the file or directory from the root
+
 const fs = require("node:fs/promises");
 const path = require("node:path");
 const pc = require("picocolors");

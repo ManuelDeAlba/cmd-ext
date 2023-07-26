@@ -1,3 +1,5 @@
+// - cat [file] - Display the file content
+
 const fs = require("node:fs/promises");
 const path = require("node:path");
 const pc = require("picocolors");

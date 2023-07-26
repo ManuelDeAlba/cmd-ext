@@ -14,11 +14,8 @@ echo - cmd-ext help - Show the available commands list
 echo - cmd-ext update - Get the latest changes
 echo.
 echo COMMANDS
-echo - ls [dir] - List the information about the files in the selected directory (current by default)
-echo - cat [file] - Display the file content
-echo - fetch [url] ... [url] - Fetch info from urls
-echo - touch [name] ... [name] - Create files
-echo - find [name] [root] - Recursively search for the file or directory from the root
+@REM Generamos la información de los comandos (desde la ruta de este archivo)
+call node %~dp0\..\utils\generateCommandsDescription.js
 goto end
 
 @REM Obtiene los cambios del repositorio remoto
