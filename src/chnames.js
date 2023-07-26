@@ -1,4 +1,4 @@
-// - chnames [path] [prefix] [name] - Rename using the prefix the files matching name
+// - chnames [path] [prefix] [name] - Rename using a prefix the files matching name
 
 const fs = require("node:fs/promises");
 const path = require("node:path");
