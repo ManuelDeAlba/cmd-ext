@@ -5,7 +5,7 @@ const path = require("node:path");
 const pc = require("picocolors");
 
 const prefijo = process.argv[2];
-const nombre = process.argv[3]; // Por defecto selecciona todo
+const nombre = process.argv[3]; // Con "*" selecciona todo
 const ruta = process.argv[4] || ".";
 
 if(!prefijo){
@@ -25,16 +25,17 @@ let rutaAbs = path.resolve(process.cwd(), ruta);
         process.exit(1);
     }
 
-    // Si la expresión existe se filtran los archivos que se van a renombrar
+    // Si se usa * selecciona todos los archivos
+    // Si es cualquier otra cosa, filtra por la expresión
     let archivosFiltrados = [];
-    if(nombre){
+    if(nombre == "*"){
+        archivosFiltrados = [...archivos];
+    } else {
         archivos.forEach(archivo => {
             if(archivo.includes(nombre)){
                 archivosFiltrados.push(archivo);
             }
         })
-    } else {
-        archivosFiltrados = [...archivos];
     }
     
     // Se pone un nombre temporal para evitar que se sobreescriban los archivos cuando coinciden los nombres
