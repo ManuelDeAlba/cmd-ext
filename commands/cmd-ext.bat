@@ -25,7 +25,7 @@ set "ruta_actual=%cd%"
 @REM Vamos a la ruta del archivo para actualizar
 cd %~dp0
 @REM Actualizamos el código
-git pull origin main
+call git pull origin main
 @REM Se actualizan las dependencias
 call npm i
 @REM Regresamos a la ruta
