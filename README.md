@@ -22,17 +22,20 @@ Get the latest changes
 > cmd-ext update
 
 ## Use
-### ls
+### ls - List the information about the files in the selected directory (current by default)
 > ls [dir]
 
-### cat
+### cat - Display the file content
 > cat [file]
 
-### fetch
+### fetch - Fetch info from urls
 > fetch [url] ... [url]
 
-### touch
+### touch - Create files
 > touch [name] ... [name]
 
-### findf
+### findf - Recursively search for the file or directory from the root
 > findf [name] [root]
+
+### chnames - Rename using the prefix the files matching name
+> chnames [path] [prefix] [name]
