@@ -1,12 +1,17 @@
-// - chnames [path] [prefix] [name] - Rename using a prefix the files matching name
+// - chnames [prefix] [name] [path] - Rename using a prefix the files matching name
 
 const fs = require("node:fs/promises");
 const path = require("node:path");
 const pc = require("picocolors");
 
-const ruta = process.argv[2] || ".";
-const prefijo = process.argv[3] || "file";
-const nombre = process.argv[4];
+const prefijo = process.argv[2];
+const nombre = process.argv[3]; // Por defecto selecciona todo
+const ruta = process.argv[4] || ".";
+
+if(!prefijo){
+    console.log(pc.red("Introduce un prefijo para renombrar los archivos\nchnames [prefix] [name] [path]"));
+    process.exit(1);
+}
 
 let rutaAbs = path.resolve(process.cwd(), ruta);
 
