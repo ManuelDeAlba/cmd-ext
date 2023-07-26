@@ -1,4 +1,4 @@
 @echo off
 call config.bat
 
-node %ruta%find.js %*
+node %ruta%findf.js %*

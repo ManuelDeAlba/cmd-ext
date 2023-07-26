@@ -34,5 +34,5 @@ Get the latest changes
 ### touch
 > touch [name] ... [name]
 
-### find
-> find [name] [root]
+### findf
+> findf [name] [root]

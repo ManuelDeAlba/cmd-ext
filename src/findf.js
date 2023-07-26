@@ -1,4 +1,4 @@
-// - find [name] [root] - Recursively search for the file or directory from the root
+// - findf [name] [root] - Recursively search for the file or directory from the root
 
 const fs = require("node:fs/promises");
 const path = require("node:path");
@@ -9,7 +9,7 @@ const raiz = process.argv[3] || ".";
 const raizAbs = path.resolve(process.cwd(), raiz);
 
 if(!nombre){
-    console.log(pc.red("Introduce el nombre del archivo\nfind [nombre] [raiz]"));
+    console.log(pc.red("Introduce el nombre del archivo\nfindf [nombre] [raiz]"));
     process.exit(1);
 }
 
