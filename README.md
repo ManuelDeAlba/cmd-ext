@@ -38,4 +38,4 @@ Get the latest changes
 > findf [name] [root]
 
 ### chnames - Rename using the prefix the files matching name
-> chnames [prefix] [name] [path]
+> chnames [prefix] [name | *] [path]

@@ -1,4 +1,4 @@
-// - chnames [prefix] [name] [path] - Rename using a prefix the files matching name
+// - chnames [prefix] [name | *] [path] - Rename using a prefix the files matching name
 
 const fs = require("node:fs/promises");
 const path = require("node:path");
@@ -9,7 +9,7 @@ const nombre = process.argv[3]; // Con "*" selecciona todo
 const ruta = process.argv[4] || ".";
 
 if(!prefijo){
-    console.log(pc.red("Introduce un prefijo para renombrar los archivos\nchnames [prefix] [name] [path]"));
+    console.log(pc.red("Introduce un prefijo para renombrar los archivos\nchnames [prefix] [name | *] [path]"));
     process.exit(1);
 }
 
